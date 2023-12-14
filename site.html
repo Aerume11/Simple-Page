@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=YourChosenFont&display=swap">
+    <style>
+    body {
+        font-family: 'Pacifico', cursive;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #000; /* Black background color */
+        color: #fff; /* White text color */
+    }
+    
+    .banner {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        object-position: 50% 30%;
+        position: relative;
+        z-index: -1;
+        filter: brightness(70%);
+    }
+    
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: transparent;
+        padding: 1em;
+        z-index: 2;
+        transition: background-color 0.5s ease-in-out;
+    }
+    
+    header.scrolled {
+        background-color: #000; /* Black background color on scroll */
+    }
+    
+    .menu-button {
+        background-color: purple;
+        color: white;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 2;
+        transition: background-color 0.5s ease-in-out;
+    }
+    
+    header.scrolled .menu-button {
+        background-color: #000;
+    }
+    
+    .menu {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #000; /* Black background color for the menu */
+        opacity: 1;
+        transition: left 0.5s ease-in-out;
+        z-index: 1;
+    }
+    
+    .menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        margin: 10px;
+    }
+    
+    .social-button {
+        display: flex;
+        align-items: center;
+    }
+    
+    .social-button img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    
+    .content {
+        padding: 20px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+        margin-top: 50px;
+        border: 2px solid #fff; /* White border around the content */
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background color */
+    }
+    
+    .frame {
+        font-family: 'Pacifico', cursive;
+        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background color for the frame */
+        padding: 20px;
+        border: 2px solid #fff; /* White border around the frame */
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    </style>
+    <title>Yungxrist's Bio</title>
+</head>
+<body>
+    <img src="https://i.gifer.com/Erie.gif" alt="Your Banner" class="banner">
+
+    <header>
+        <button id="toggleMenu" class="menu-button">&#9776; Menu</button>
+        <div class="menu" id="hiddenMenu">
+            <a href="https://discord.com/yungxrist.1" class="social-button">
+                <img src="discord_icon.png" alt="Discord Icon">Discord: .yungxrist.1
+            </a>
+            <a href="https://t.me/yungxrist2" class="social-button">
+                <img src="telegram_icon.png" alt="Telegram Icon">Telegram: @yungxrist2
+            </a>
+            <a href="https://forum.blackrussia.online/members/aerume_solo.1828961/" class="social-button">
+                <img src="forum_icon.png" alt="Forum Icon">Forum Black Russia
+            </a>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="frame">
+            <p>Hello! I'm Daniel, a 19-year-old developer living in the picturesque landscapes of Spain. Originally from Ukraine, my journey into the world of programming began in my teenage years, fueled by a fascination with solving intricate problems and crafting innovative solutions.</p>
+
+            <p>Immersing myself in the coding realm, I discovered a passion for both Java and Python. These languages have become integral to my creative expression, allowing me to build robust backend systems with Java and develop dynamic web applications using the flexibility of Python.</p>
+<p>
+    Having relocated to the breathtaking landscapes of Spain, I draw inspiration from the rich cultural diversity and scenic beauty that surrounds me. This fusion of the Spanish atmosphere with my Ukrainian roots greatly influences my approach to programming, infusing a unique perspective into each project I undertake.
+</p>
+
+<p>
+    My expertise extends beyond mere code writing; I take delight in crafting efficient algorithms to ensure optimal project performance. I am not only committed to technical excellence but also to continuous learning, staying abreast of new trends in the ever-evolving field of development.
+</p>
+
+<p>
+    Beyond coding, I am a perpetual learner, always eager to tackle challenges and expand the boundaries of my skills. My programming journey is a harmonious blend of cultural influences, a profound love for coding, and an unwavering commitment to personal and professional growth.
+</p>
+
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+            const menuButton = document.getElementById('toggleMenu');
+    
+            menuButton.addEventListener('click', function () {
+                this.style.backgroundColor = getRandomColor();
+            });
+    
+            function getRandomColor() {
+                const letters = '0123456789ABCDEF';
+                let color = '#';
+                for (let i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+        });document.addEventListener('DOMContentLoaded', function () {
+                const menuButton = document.getElementById('toggleMenu');
+        
+                menuButton.addEventListener('click', function () {
+                    this.style.backgroundColor = getRandomColor();
+                });
+        
+                function getRandomColor() {
+                    const letters = '0123456789ABCDEF';
+                    let color = '#';
+                    for (let i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                    }
+                    return color;
+                }
+            });
+            document.addEventListener('DOMContentLoaded', function () {
+                const menuButton = document.getElementById('toggleMenu');
+                const hiddenMenu = document.getElementById('hiddenMenu');
+            
+                menuButton.addEventListener('click', function () {
+                    hiddenMenu.style.left = hiddenMenu.style.left === '0px' ? '-300px' : '0px';
+                });
+            });
+    </script>
+</body>
+</html>
